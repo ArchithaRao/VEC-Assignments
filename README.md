@@ -1,2 +1,2 @@
 # VEC-Assignments
-"C:\Users\Architha Rao\OneDrive\Desktop\Airline Review\Airline Demo.mp4"
+https://1drv.ms/v/c/6a0e4e0672114a2a/EQn82yL48uRJrFyqb-BHo4MBa0nC9PRJgGgLcDpuPNgrQw?e=qXWhGC
