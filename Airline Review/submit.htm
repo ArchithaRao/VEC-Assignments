@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Feedback</title>
+    <style>
+        .thank-you-message {
+            display: none;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 15px;
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h2>Submit Feedback</h2>
+    <form id="feedbackForm" action="/submit" method="POST">
+        <label for="AirlineName">Airline Name:</label><br>
+        <input type="text" id="AirlineName" name="Airline name" required><br><br>
+        
+        <label for="SeatType">Seat Type:</label><br>
+        <input type="text" id="SeatType" name="Seat Type" required><br><br>
+        
+        <label for="TypeOfTraveller">Type Of Traveller:</label><br>
+        <input type="text" id="TypeOfTraveller" name="Type Of Traveller" required><br><br>
+        
+        <label for="Origin">Origin:</label><br>
+        <input type="text" id="Origin" name="Origin" required><br><br>
+        
+        <label for="Destination">Destination:</label><br>
+        <input type="text" id="Destination" name="Destination" required><br><br>
+        
+        <label for="MonthFlown">Month Flown:</label><br>
+        <input type="text" id="MonthFlown" name="Month Flown" required><br><br>
+        
+        <label for="YearFlown">Year Flown:</label><br>
+        <input type="text" id="YearFlown" name="Year Flown" required><br><br>
+        
+        <label for="Verified">Verified:</label><br>
+        <input type="text" id="Verified" name="Verified" required><br><br>
+        
+        </form>
+
+    <hr>
+    <h3>Recommendation: </h3>
+    
+    <form id="ratingForm" action="/rate" method="POST">
+        <label for="rating">Rate the recommendation (1-5):</label><br>
+        <input type="number" id="rating" name="rating" min="1" max="5" required><br><br>
+        <input type="hidden" name="predicted_recommendation" value="Recommended">
+        <input type="submit" value="Submit">
+    </form>
+    
+    <div class="thank-you-message" id="thankYouMessage">
+        <h2>Thank You for Your Feedback!</h2>
+        <p>We appreciate your time and effort in providing us with your feedback.</p>
+        <p>Your input is valuable and helps us improve our services.</p>
+    </div>
+
+    <script>
+        document.getElementById('feedbackForm').onsubmit = function(e) {
+            e.preventDefault();
+            document.getElementById('thankYouMessage').style.display = 'block';
+        };
+
+        document.getElementById('ratingForm').onsubmit = function(e) {
+            e.preventDefault();
+            document.getElementById('thankYouMessage').style.display = 'block';
+        };
+    </script>
+</body>
+</html>
